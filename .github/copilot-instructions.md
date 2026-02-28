@@ -29,44 +29,7 @@ This is a professional business website for Plank & Brush, a painting and floori
 
 ## Development
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Building for Production
-
-```bash
-npm run build
-npm start
-```
-
-## Project Structure
-
-```
-src/
-├── app/
-│   ├── about/
-│   │   └── page.tsx
-│   ├── contact/
-│   │   └── page.tsx
-│   ├── portfolio/
-│   │   └── page.tsx
-│   ├── services/
-│   │   ├── painting/
-│   │   │   └── page.tsx
-│   │   └── flooring/
-│   │       └── page.tsx
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── globals.css
-public/
-└── [images and assets]
-```
+- Run `npm run dev` to start development server
+- All pages are pre-built with professional content
+- Customizable color scheme and branding
+- Ready for deployment
