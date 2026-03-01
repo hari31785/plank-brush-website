@@ -54,16 +54,16 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-slate-800">Painting Services</h3>
               </div>
               <p className="text-slate-600 mb-6">
-                Professional interior and exterior painting with premium materials and expert craftsmanship.
+                Professional interior painting with premium materials and expert craftsmanship.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
-                  Interior & Exterior Painting
+                  Interior Wall Painting
                 </li>
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
-                  Color Consultation
+                  Cabinet Refinishing
                 </li>
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
@@ -71,7 +71,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-blue-600 mr-3" />
-                  Premium Paint Brands
+                  Premium Paint Application
                 </li>
               </ul>
             </div>
@@ -81,7 +81,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-slate-800">Flooring Services</h3>
               </div>
               <p className="text-slate-600 mb-6">
-                Expert flooring installation and refinishing for all types of residential and commercial spaces.
+                Expert flooring installation and refinishing for residential and commercial spaces.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-slate-700">
@@ -90,7 +90,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-amber-700 mr-3" />
-                  Laminate & Vinyl
+                  Luxury Vinyl Plank
                 </li>
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-amber-700 mr-3" />
@@ -98,7 +98,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-amber-700 mr-3" />
-                  Tile & Stone Work
+                  Laminate Installation
                 </li>
               </ul>
             </div>
@@ -130,24 +130,21 @@ export default function Home() {
             </div>
             <div className="text-center bg-white rounded-xl p-8 shadow-lg border border-slate-200">
               <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-slate-800 mb-2">Visit Us</h3>
-              <p className="text-slate-600">Your City, State</p>
+              <h3 className="text-xl font-semibold text-slate-800 mb-2">Service Area</h3>
+              <p className="text-slate-600">Okemos, MI & Surrounding Areas</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-800 text-white py-8">
+      <footer className="bg-sky-200 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-amber-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">P&B</span>
-              </div>
-              <span className="text-lg font-bold">Plank & Brush</span>
+          <div className="flex flex-col md:flex-row justify-between items-center h-16">
+            <div className="scale-[0.35] origin-left flex items-center">
+              <Logo size="sm" className="text-slate-800 [&_span]:text-slate-800 [&_svg_rect]:fill-amber-600 [&_svg_path]:fill-red-500 [&_svg_circle]:fill-blue-600" />
             </div>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-600 text-xs leading-none">
               © 2026 Plank & Brush. All rights reserved.
             </p>
           </div>

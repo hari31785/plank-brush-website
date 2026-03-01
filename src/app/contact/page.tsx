@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { Logo } from '../../components/Logo';
 
 export default function Contact() {
 
@@ -14,14 +15,10 @@ export default function Contact() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6">
             Get In <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">Touch</span>
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Ready to transform your space? Contact us today for a free consultation and estimate. 
             We're here to bring your vision to life.
           </p>
-          <Link href="/quote" className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-            Get Your Free Quote
-            <ArrowRight className="h-5 w-5 ml-2" />
-          </Link>
         </div>
       </section>
 
@@ -78,7 +75,6 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-slate-800">Phone</h3>
                     <p className="text-slate-600">(517) 398-6362</p>
-                    <p className="text-sm text-slate-500">Mon-Fri: 7AM-6PM, Sat: 8AM-4PM</p>
                   </div>
                 </div>
                 <div className="flex items-start bg-gradient-to-r from-slate-50 to-blue-50 p-4 rounded-xl border border-slate-200 hover:shadow-lg transition-all duration-300">
@@ -93,7 +89,7 @@ export default function Contact() {
                   <MapPin className="h-6 w-6 text-blue-600 mt-1 mr-4 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-slate-800">Service Area</h3>
-                    <p className="text-slate-600">Your City and Surrounding Areas</p>
+                    <p className="text-slate-600">Okemos, MI and Surrounding Areas</p>
                     <p className="text-sm text-slate-500">Free estimates within 25 miles</p>
                   </div>
                 </div>
@@ -102,9 +98,9 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-slate-800">Business Hours</h3>
                     <div className="text-slate-600">
-                      <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
-                      <p>Saturday: 8:00 AM - 4:00 PM</p>
-                      <p>Sunday: Emergency calls only</p>
+                      <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                      <p>Saturday: 9:00 AM - 1:00 PM</p>
+                      <p>Sunday: Closed</p>
                     </div>
                   </div>
                 </div>
@@ -114,9 +110,9 @@ export default function Contact() {
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-6 shadow-lg">
                 <h3 className="text-lg font-semibold text-amber-900 mb-2">Emergency Service</h3>
                 <p className="text-amber-700 mb-2">
-                  Need urgent repairs? We offer 24/7 emergency service for water damage and urgent painting needs.
+                  Need urgent repairs? We offer emergency service for urgent painting and flooring needs.
                 </p>
-                <p className="text-amber-900 font-semibold">Emergency Line: (555) 123-HELP</p>
+                <p className="text-amber-900 font-semibold">Emergency Line: (517) 398-6362</p>
               </div>
             </div>
           </div>
@@ -134,28 +130,46 @@ export default function Contact() {
               <h3 className="text-xl font-semibold text-slate-800 mb-3">How do you provide estimates?</h3>
               <p className="text-slate-600 leading-relaxed">
                 We offer free in-home consultations where we assess your project, take measurements, 
-                and provide detailed written estimates with no obligation.
+                and provide detailed written estimates with no obligation. We pride ourselves on honest, 
+                transparent pricing.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-800 mb-3">Are you licensed and insured?</h3>
+              <h3 className="text-xl font-semibold text-slate-800 mb-3">What experience do you have?</h3>
               <p className="text-slate-600 leading-relaxed">
-                Yes, we are fully licensed contractors with comprehensive liability insurance and 
-                workers' compensation coverage for your protection.
+                We bring years of hands-on experience in both painting and flooring projects. Our extensive 
+                background covers residential and commercial work, ensuring quality results every time.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
               <h3 className="text-xl font-semibold text-slate-800 mb-3">What is your typical timeline?</h3>
               <p className="text-slate-600 leading-relaxed">
                 Project timelines vary based on scope and size. Most residential painting projects take 
-                2-5 days, while flooring installations typically take 1-3 days.
+                2-5 days, while flooring installations typically take 1-3 days. We work efficiently while 
+                maintaining high quality standards.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
-              <h3 className="text-xl font-semibold text-slate-800 mb-3">Do you offer warranties?</h3>
+              <h3 className="text-xl font-semibold text-slate-800 mb-3">What guarantee do you offer?</h3>
               <p className="text-slate-600 leading-relaxed">
-                Yes, we provide warranties on all our work. Paint jobs come with a 5-year warranty, 
-                and flooring installations include both material and labor warranties.
+                We stand behind our work with a personal satisfaction guarantee. We use quality materials 
+                and proven techniques, and we'll address any concerns to ensure you're completely happy 
+                with the results.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-xl font-semibold text-slate-800 mb-3">What makes you different?</h3>
+              <p className="text-slate-600 leading-relaxed">
+                As an individual business owner, you work directly with me from start to finish. This means 
+                personal attention, direct communication, and competitive pricing without the overhead of 
+                large companies.
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300">
+              <h3 className="text-xl font-semibold text-slate-800 mb-3">Do you handle cleanup?</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Absolutely! We believe in leaving your space cleaner than we found it. All debris, materials, 
+                and equipment are removed, and we do a thorough cleanup after every project.
               </p>
             </div>
           </div>
@@ -163,16 +177,13 @@ export default function Contact() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-800 text-white py-8">
+      <footer className="bg-sky-200 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-amber-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">P&B</span>
-              </div>
-              <span className="text-lg font-bold">Plank & Brush</span>
+          <div className="flex flex-col md:flex-row justify-between items-center h-16">
+            <div className="scale-[0.35] origin-left flex items-center">
+              <Logo size="sm" className="text-slate-800 [&_span]:text-slate-800 [&_svg_rect]:fill-amber-600 [&_svg_path]:fill-red-500 [&_svg_circle]:fill-blue-600" />
             </div>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-600 text-xs leading-none">
               © 2026 Plank & Brush. All rights reserved.
             </p>
           </div>

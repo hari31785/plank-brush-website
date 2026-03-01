@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { CheckCircle, Home, Phone, Mail } from 'lucide-react';
+import { Logo } from '../../../components/Logo';
 
 export default function ThankYou() {
   return (
@@ -105,8 +106,7 @@ export default function ThankYou() {
             <div className="text-center bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-8 shadow-lg border border-blue-100">
               <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-800 mb-2">Call Us Now</h3>
-              <p className="text-slate-600 mb-4">(517) 398-6362</p>
-              <p className="text-sm text-slate-500">Mon-Fri: 8AM-6PM | Sat: 9AM-4PM</p>
+              <p className="text-slate-600">(517) 398-6362</p>
             </div>
             <div className="text-center bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-8 shadow-lg border border-blue-100">
               <Mail className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -119,16 +119,13 @@ export default function ThankYou() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-800 text-white py-8">
+      <footer className="bg-teal-200 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-amber-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">P&B</span>
-              </div>
-              <span className="text-lg font-bold">Plank & Brush</span>
+          <div className="flex flex-col md:flex-row justify-between items-center h-16">
+            <div className="scale-[0.35] origin-left flex items-center">
+              <Logo size="sm" className="text-slate-800 [&_span]:text-slate-800 [&_svg_rect]:fill-amber-600 [&_svg_path]:fill-red-500 [&_svg_circle]:fill-blue-600" />
             </div>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-600 text-xs leading-none">
               © 2026 Plank & Brush. All rights reserved.
             </p>
           </div>

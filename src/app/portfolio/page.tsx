@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Filter, ArrowLeft, ArrowRight } from 'lucide-react';
+import { Logo } from '../../components/Logo';
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -14,15 +15,7 @@ export default function Portfolio() {
       category: 'interior-painting',
       description: 'Complete interior painting transformation with custom color scheme',
       image: 'Interior Paint Project 1',
-      tags: ['Interior', 'Residential', 'Color Consultation']
-    },
-    {
-      id: 2,
-      title: 'Victorian Home Exterior',
-      category: 'exterior-painting',
-      description: 'Historic home exterior restoration with period-appropriate colors',
-      image: 'Exterior Paint Project 1',
-      tags: ['Exterior', 'Historic', 'Restoration']
+      tags: ['Interior', 'Residential']
     },
     {
       id: 3,
@@ -58,14 +51,6 @@ export default function Portfolio() {
     },
     {
       id: 7,
-      title: 'Deck Staining Project',
-      category: 'exterior-painting',
-      description: 'Deck cleaning, repair, and protective staining service',
-      image: 'Deck Staining',
-      tags: ['Deck', 'Staining', 'Protection']
-    },
-    {
-      id: 8,
       title: 'Hardwood Refinishing',
       category: 'flooring',
       description: 'Complete hardwood floor refinishing with custom stain',
@@ -120,16 +105,6 @@ export default function Portfolio() {
               }`}
             >
               Interior Painting
-            </button>
-            <button
-              onClick={() => setActiveFilter('exterior-painting')}
-              className={`px-4 py-2 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md ${
-                activeFilter === 'exterior-painting'
-                  ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-700 border border-slate-200'
-              }`}
-            >
-              Exterior Painting
             </button>
             <button
               onClick={() => setActiveFilter('flooring')}
@@ -294,11 +269,11 @@ export default function Portfolio() {
                 </div>
               </div>
               <p className="text-slate-700 mb-4 leading-relaxed">
-                "From estimate to completion, everything was handled professionally. Great communication 
-                and excellent results on our exterior painting."
+                "Professional interior painting with attention to every detail. Great communication 
+                and excellent results on our home renovation project."
               </p>
               <p className="text-slate-800 font-semibold">- Lisa Chen</p>
-              <p className="text-blue-600 text-sm font-medium">Exterior Painting Project</p>
+              <p className="text-blue-600 text-sm font-medium">Interior Painting Project</p>
             </div>
           </div>
         </div>
@@ -321,16 +296,13 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-8">
+      <footer className="bg-sky-200 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-amber-600 rounded-lg flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-sm">P&B</span>
-              </div>
-              <span className="text-lg font-bold">Plank & Brush</span>
+          <div className="flex flex-col md:flex-row justify-between items-center h-16">
+            <div className="scale-[0.35] origin-left flex items-center">
+              <Logo size="sm" className="text-slate-800 [&_span]:text-slate-800 [&_svg_rect]:fill-amber-600 [&_svg_path]:fill-red-500 [&_svg_circle]:fill-blue-600" />
             </div>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-600 text-xs leading-none">
               © 2026 Plank & Brush. All rights reserved.
             </p>
           </div>

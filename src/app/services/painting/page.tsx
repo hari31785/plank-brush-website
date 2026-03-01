@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, Palette, CheckCircle, Star } from 'lucide-react';
-
+import { Logo } from '../../../components/Logo';
 export default function PaintingServices() {
   return (
     <div className="min-h-screen bg-white">
@@ -48,13 +48,6 @@ export default function PaintingServices() {
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-slate-800">Color Consultation</h4>
-                    <p className="text-slate-600">Expert color matching and design advice</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                  <div>
                     <h4 className="font-semibold text-slate-800">Surface Preparation</h4>
                     <p className="text-slate-600">Thorough cleaning, patching, and priming</p>
                   </div>
@@ -71,45 +64,6 @@ export default function PaintingServices() {
                   <div>
                     <h4 className="font-semibold text-slate-800">Clean-Up Service</h4>
                     <p className="text-slate-600">Complete job site cleanup included</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            {/* Exterior Painting */}
-            <div>
-              <h2 className="text-3xl font-bold text-slate-800 mb-6">Exterior Painting</h2>
-              <p className="text-slate-600 mb-8">
-                Protect and beautify your property's exterior with our comprehensive exterior painting services. 
-                We use weather-resistant paints designed to withstand the elements.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-slate-800">Weather-Resistant Coatings</h4>
-                    <p className="text-slate-600">Premium exterior paints for long-lasting protection</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-slate-800">Power Washing</h4>
-                    <p className="text-slate-600">Deep cleaning before paint application</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-slate-800">Trim & Detail Work</h4>
-                    <p className="text-slate-600">Precision painting of windows, doors, and trim</p>
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-blue-600 mt-1 mr-3 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-semibold text-slate-800">Warranty Protection</h4>
-                    <p className="text-slate-600">Quality guarantee on all exterior work</p>
                   </div>
                 </li>
               </ul>
@@ -170,16 +124,13 @@ export default function PaintingServices() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-800 text-white py-8">
+      <footer className="bg-sky-200 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-amber-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">P&B</span>
-              </div>
-              <span className="text-lg font-bold">Plank & Brush</span>
+          <div className="flex flex-col md:flex-row justify-between items-center h-16">
+            <div className="scale-[0.35] origin-left flex items-center">
+              <Logo size="sm" className="text-slate-800 [&_span]:text-slate-800 [&_svg_rect]:fill-amber-600 [&_svg_path]:fill-red-500 [&_svg_circle]:fill-blue-600" />
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-slate-600 text-xs leading-none">
               © 2026 Plank & Brush. All rights reserved.
             </p>
           </div>

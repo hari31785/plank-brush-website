@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Phone, Mail, MapPin, Calculator, CheckCircle, Loader2 } from 'lucide-react';
+import { Logo } from '../../components/Logo';
 
 export default function GetQuote() {
   const router = useRouter();
@@ -228,7 +229,7 @@ export default function GetQuote() {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors text-slate-900"
-                  placeholder="123 Main Street, City, State, ZIP"
+                  placeholder="123 Main Street, Okemos, MI, ZIP"
                 />
               </div>
 
@@ -249,7 +250,7 @@ export default function GetQuote() {
                     />
                     <div>
                       <div className="font-semibold text-slate-800">🎨 Painting Services</div>
-                      <div className="text-sm text-slate-600">Interior or exterior painting</div>
+                      <div className="text-sm text-slate-600">Interior painting services</div>
                     </div>
                   </label>
                   <label className="flex items-center p-4 border-2 border-slate-200 rounded-lg cursor-pointer hover:border-amber-300 transition-colors">
@@ -456,8 +457,7 @@ export default function GetQuote() {
             <div className="text-center bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-8 shadow-lg border border-blue-100">
               <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-800 mb-2">Call Us</h3>
-              <p className="text-slate-600 mb-2">(517) 398-6362</p>
-              <p className="text-sm text-slate-500">Mon-Fri: 8AM-6PM</p>
+              <p className="text-slate-600">(517) 398-6362</p>
             </div>
             <div className="text-center bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-8 shadow-lg border border-blue-100">
               <Mail className="h-12 w-12 text-blue-600 mx-auto mb-4" />
@@ -468,7 +468,7 @@ export default function GetQuote() {
             <div className="text-center bg-gradient-to-br from-blue-50 to-slate-50 rounded-xl p-8 shadow-lg border border-blue-100">
               <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-slate-800 mb-2">Service Area</h3>
-              <p className="text-slate-600 mb-2">Your City & Surrounding Areas</p>
+              <p className="text-slate-600 mb-2">Okemos, MI & Surrounding Areas</p>
               <p className="text-sm text-slate-500">Free estimates within 25 miles</p>
             </div>
           </div>
@@ -476,16 +476,13 @@ export default function GetQuote() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-800 text-white py-8">
+      <footer className="bg-sky-200 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-amber-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">P&B</span>
-              </div>
-              <span className="text-lg font-bold">Plank & Brush</span>
+          <div className="flex flex-col md:flex-row justify-between items-center h-16">
+            <div className="scale-[0.35] origin-left flex items-center">
+              <Logo size="sm" className="text-slate-800 [&_span]:text-slate-800 [&_svg_rect]:fill-amber-600 [&_svg_path]:fill-red-500 [&_svg_circle]:fill-blue-600" />
             </div>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-600 text-xs leading-none">
               © 2026 Plank & Brush. All rights reserved.
             </p>
           </div>

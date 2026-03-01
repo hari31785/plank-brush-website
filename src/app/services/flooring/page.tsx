@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, HomeIcon, CheckCircle, Award } from 'lucide-react';
+import { Logo } from '../../../components/Logo';
 
 export default function FlooringServices() {
   return (
@@ -101,7 +102,7 @@ export default function FlooringServices() {
             <div className="bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200 rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-2xl font-bold text-slate-800 mb-4">Luxury Vinyl</h3>
               <p className="text-slate-600 mb-6">
-                Modern vinyl plank and tile options that offer style, comfort, and exceptional durability.
+                Modern vinyl plank options that offer style, comfort, and exceptional durability.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-slate-700">
@@ -110,7 +111,7 @@ export default function FlooringServices() {
                 </li>
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-orange-600 mr-3" />
-                  Realistic Wood & Stone Looks
+                  Realistic Wood Looks
                 </li>
                 <li className="flex items-center text-slate-700">
                   <CheckCircle className="h-5 w-5 text-orange-600 mr-3" />
@@ -235,16 +236,13 @@ export default function FlooringServices() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-800 text-white py-8">
+      <footer className="bg-sky-200 text-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-amber-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">P&B</span>
-              </div>
-              <span className="text-lg font-bold">Plank & Brush</span>
+          <div className="flex flex-col md:flex-row justify-between items-center h-16">
+            <div className="scale-[0.35] origin-left flex items-center">
+              <Logo size="sm" className="text-slate-800 [&_span]:text-slate-800 [&_svg_rect]:fill-amber-600 [&_svg_path]:fill-red-500 [&_svg_circle]:fill-blue-600" />
             </div>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-600 text-xs leading-none">
               © 2026 Plank & Brush. All rights reserved.
             </p>
           </div>

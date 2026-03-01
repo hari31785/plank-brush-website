@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
+'use client';
+
 import { Geist, Geist_Mono } from "next/font/google";
+import { useState } from 'react';
 import "./globals.css";import { Logo } from "../components/Logo";
 import Link from "next/link";
 const geistSans = Geist({
@@ -12,22 +14,31 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Plank & Brush | Professional Painting & Flooring Services",
-  description: "Transform your space with Plank & Brush - premier painting and flooring specialists. Quality craftsmanship, competitive prices, and exceptional service.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
   return (
     <html lang="en">
+      <head>
+        <title>Plank & Brush | Professional Painting & Flooring Services</title>
+        <meta name="description" content="Transform your space with Plank & Brush - premier painting and flooring specialists. Quality craftsmanship, competitive prices, and exceptional service." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className="shadow-xl border-b border-blue-100 relative" style={{background: 'linear-gradient(to right, rgb(248 250 252), rgb(239 246 255))'}}>
+        <nav className="bg-sky-200 shadow-xl border-b border-sky-300 relative">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex items-center justify-between h-60 relative overflow-visible">
               {/* Left Navigation */}
@@ -46,7 +57,7 @@ export default function RootLayout({
                     <div className="py-6">
                       <Link href="/services/painting" className="block px-4 py-4 text-base text-slate-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 transition-all duration-200 font-medium border-b border-slate-200">
                         🎨 Painting Services
-                        <div className="text-xs text-slate-500 mt-2">Interior & Exterior Painting</div>
+                        <div className="text-xs text-slate-500 mt-2">Interior Painting Services</div>
                       </Link>
                       <Link href="/services/flooring" className="block px-4 py-4 text-base text-slate-700 hover:bg-gradient-to-r hover:from-amber-50 hover:to-orange-50 hover:text-amber-700 transition-all duration-200 font-medium">
                         🏠 Flooring Services
@@ -80,14 +91,61 @@ export default function RootLayout({
 
               {/* Mobile menu button */}
               <div className="md:hidden">
-                <button className="text-gray-700 hover:text-blue-600 p-2">
-                  <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
+                <button 
+                  onClick={toggleMobileMenu}
+                  className="text-slate-700 hover:text-blue-600 p-2 relative z-50"
+                  aria-label="Toggle menu"
+                >
+                  {isMobileMenuOpen ? (
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  ) : (
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  )}
                 </button>
               </div>
             </div>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden absolute top-full left-0 w-full bg-white border-t border-blue-100 shadow-xl z-40">
+              <div className="py-4 px-6 space-y-4">
+                <Link href="/" onClick={closeMobileMenu} className="block text-slate-700 hover:text-blue-700 py-3 px-4 rounded-lg hover:bg-blue-50 text-lg font-semibold transition-all">
+                  Home
+                </Link>
+                
+                {/* Mobile Services Menu */}
+                <div className="space-y-2">
+                  <div className="text-slate-700 py-2 px-4 text-lg font-semibold">
+                    Services
+                  </div>
+                  <Link href="/services/painting" onClick={closeMobileMenu} className="block text-slate-600 hover:text-blue-700 py-2 px-8 rounded-lg hover:bg-blue-50 transition-all">
+                    🎨 Painting Services
+                  </Link>
+                  <Link href="/services/flooring" onClick={closeMobileMenu} className="block text-slate-600 hover:text-amber-700 py-2 px-8 rounded-lg hover:bg-amber-50 transition-all">
+                    🏠 Flooring Services
+                  </Link>
+                </div>
+                
+                <Link href="/portfolio" onClick={closeMobileMenu} className="block text-slate-700 hover:text-blue-700 py-3 px-4 rounded-lg hover:bg-blue-50 text-lg font-semibold transition-all">
+                  Portfolio
+                </Link>
+                <Link href="/about" onClick={closeMobileMenu} className="block text-slate-700 hover:text-blue-700 py-3 px-4 rounded-lg hover:bg-blue-50 text-lg font-semibold transition-all">
+                  About
+                </Link>
+                <Link href="/contact" onClick={closeMobileMenu} className="block text-slate-700 hover:text-blue-700 py-3 px-4 rounded-lg hover:bg-blue-50 text-lg font-semibold transition-all">
+                  Contact
+                </Link>
+                <Link href="/quote" onClick={closeMobileMenu} className="block bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-6 rounded-xl text-lg font-bold text-center hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg">
+                  Get Quote
+                </Link>
+              </div>
+            </div>
+          )}
         </nav>
         {children}
       </body>
